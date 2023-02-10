@@ -5,6 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 a, a:active
@@ -133,22 +135,132 @@ display: flex;
 flex-wrap: wrap;
 }
 
-aside{
-flex: 30px;
+.aside{
+flex:30px;
 background-color:rgb(11, 105, 58);
 padding: 20px;
 }
 
-section{
+span{
 flex:70%;
 background-color: beige;
 padding: 20px;
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:850px){
     .esteticafacialcaracteristicas {
         flex-direction: column;
     
     }
 
+}
+
+nav{
+background: #0a1a2a;
+height: 80px;
+width: 100%;
+
+}
+
+.enlace{
+    position: absolute;
+    padding: 20px;
+}
+.logo {
+    height: 40px;
+}
+
+nav ul{
+float: right;
+margin-right: 20px;
+
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5 px; 
+
+}
+
+nav ul li a {
+color: #fff;
+font-size: 18px;
+padding: 7px 13px;
+border-radius: 3px;
+text-transform: uppercase;
+}
+
+li a.active, li a:hover{
+background:rgb(11, 105, 58);
+transition: .5s;
+
+}
+
+.checkbtn{
+font-size: 30px;
+color:#fff;
+line-height: 80px;
+float: right;
+margin-right: 40px;
+cursor: pointer;
+display: none;
+
+}
+#check{
+    display: none;
+}
+
+section{
+background: url("../images/foto1.jpg")no-repeat;
+background-size: cover;
+background-position: center center;
+height: calc(100vh - 80px - 185px);
+}
+
+@media(max-width:952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width:929px){
+.checkbtn{
+    display: block;
+}
+ul{
+position: fixed;
+width: 100%;
+height: 100vh;
+background: #0a1a2a;
+top: 80px;
+left: -100%;
+text-align: center;
+transition: all .0,5s;
+}
+
+nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px; 
+    
+    }
+
+
+
+
+nav ul li a{
+    font-size: 20px;
+    }
+    
+    li a:hover, li a.active{
+    background: none;
+    color:rgb(51, 75, 59);
+    }
+    
+    #check:checked ~ ul{
+        left:0;
+    }
 }
